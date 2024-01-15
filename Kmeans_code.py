@@ -30,10 +30,12 @@ for i in range (1,11):
   wcss.append(kmeans.inertia_)
 
 plt.plot(range(1,11),wcss)
+plt.scatter(range(1,11), wcss , color = 'red')
 plt.title("Método del codo")
 plt.xlabel("Número de Clusters")
 plt.ylabel("WCSS(k)")
 plt.xticks(np.arange(1, 11, step=1)) # para tener el número de clusters
+plt.savefig('Kmeans_WCSS.png')
 plt.show()
 
 # Utilizo 3 cluster debido a los resultados anteriores.
@@ -60,4 +62,5 @@ axes[1].set_title('Gráfico Utilizando KMeans')
 
 
 plt.tight_layout()
+plt.savefig('Kmeans_Cluster.png')
 plt.show()
